@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="./lib/jquery/jquery.mobile-1.4.4.min.css">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="./lib/jquery/jquery-1.11.1.min.js" ></script>
+        <script type="text/javascript" src="./lib/jquery/jquery.mobile-1.4.4.min.js"> </script>
+  <script type="text/javascript">
+              var map;
+              document.addEventListener("deviceready", function() {
+                 var div = document.getElementById("map_canvas");
+                 map = plugin.google.maps.Map.getMap(div);
+              }, false);
+  </script>
+  <title>見守りお守り</title>
+  </head>
+    <body>
+      <div data-role="page" id="first" data-theme="a" >
+          <div data-role="header" data-theme="a">
+            <h1>見守りお守り</h1>
+          </div>
+          <div data-role="content" >
+            <div style="width:100%; height:400px" id="map_canvas"></div>
+            <a href="#help" id="help" style="background: #FF5555; color: white;" class="ui-btn ui-icon-alert ui-btn-icon-left" >助けて欲しい</a><p><p><br/><br/><br/><br/>
+              <a href="test.html"  id="ok" style="background: #3333FF; color: white;" class="ui-btn ui-icon-star ui-btn-icon-left">無事です</a>
+            </div>
+            <div data-role="footer" data-position="fixed" >
+              <h3>マリーナ大社</h3>
+            </div>
+          </div>
+          <div data-role="page" id="help" data-theme="a">
+           <div data-role="header" data-theme="a">
+            <h1>見守りお守り</h1>
+          </div>
+          <div data-role="content" >
+            はい。分かりました。場所は"マリーナプラザ"ですね。{ 助けにいきます | ここに留まって下さい }
+           <a href="#first" class="ui-btn ui-icon-alert ui-btn-icon-left" >戻る</a>
+          </div>
+            <div data-role="footer" data-position="fixed" >
+              <h3>マリーナ大社</h3>
+            </div>
+          </div>
+          <div data-role="page" id="ok" data-theme="a">
+            <div data-role="header" data-theme="a">
+            <h1>見守りお守り</h1>
+          </div>
+        <div data-role="content" >
+            はい。分かりました。マリーナプラザは、"津波避難施設"になっています。
+        <a href="#first" class="ui-btn ui-icon-alert ui-btn-icon-left" >戻る</a>
+     </div>
+     <div data-role="footer" data-position="fixed" >
+       <h3>マリーナ大社</h3>
+    </div>
+ </body>
+</html>
